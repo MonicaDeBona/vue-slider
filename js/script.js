@@ -53,7 +53,10 @@ createApp({
             }
         },
         previousSlide(){
-
+            this.activeIndex--;
+            if (this.activeIndex < 0) {
+                this.activeIndex = this.slides.length -1;
+            }
         },
     }
 }).mount('#app');
